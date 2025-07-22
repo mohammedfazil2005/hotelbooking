@@ -1,0 +1,81 @@
+.header-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+}
+
+.header-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 700px;
+    color: white;
+    gap: 10px;
+}
+.header-content h1{
+    font-size: 55px;
+    font-weight: bold;
+}
+.header-content p{
+    text-align: center;
+    font-weight: lighter;
+}
+.header-content div{
+    width: 400px;
+    display: flex;
+    padding:10px 20px;
+    border: none;
+    justify-content: space-between;
+    border-radius: 20px;
+    background-color: rgba(65, 62, 62, 0.529);
+    gap: 10px;
+}
+.header-content div button{
+    padding:10px 10px;
+    border-radius: 20px;
+    background-color: rgba(65, 62, 62, 0.529);
+
+    color: white;
+    width: 100%;
+    border: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+@media screen and (max-width:700px) {
+    .header-content{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:641px) {
+    .header-content{
+        width: 100%;
+    }
+    .header-content h1{
+        font-size: 37px;
+    }
+    .header-content p{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:418px) {
+    .header-content div{
+        width: 100%;
+        padding: 7px;
+    }
+    .header-content div button{
+        padding: 9px;
+        font-size: 10px;
+    }
+
+}

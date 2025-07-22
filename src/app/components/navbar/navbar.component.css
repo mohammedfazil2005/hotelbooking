@@ -1,0 +1,10 @@
+.nav-bar{
+    /* background-color: rgba(100, 104, 106, 0.674); */
+}
+
+.nav-a-tag{
+    color: black;
+    font-weight: lighter;
+    border-bottom: 2px solid white;
+    margin: 0px 10px;
+}
