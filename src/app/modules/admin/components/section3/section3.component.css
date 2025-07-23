@@ -1,0 +1,31 @@
+.section1-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    
+
+}
+
+.table-container-section1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+.table-container-section1 table{
+    width: 100% !important;
+    table-layout: fixed; /* optional if you want equal column widths */
+}
+.table-container-section1 table thead th{
+    text-transform: uppercase;
+}
+
+.table-container-section1 table tr td{
+    font-weight: lighter;
+}
+
+.table-container-section1 table tr td img{
+    width: 40px;
+    height: 40px;
+}

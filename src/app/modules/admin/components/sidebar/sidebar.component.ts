@@ -13,7 +13,7 @@ export class SidebarComponent {
   sidebarArray:Array<any>=[
     {id:1,title:'dashboard',icon:'fa-solid fa-chart-line',link:'/admin'},
     {id:2,title:'Add Hotel',link:'/admin/section2',icon:'fa-solid fa-hotel'},
-    {id:3,title:'All Hotels',link:'/admin/section2',icon:'fa-solid fa-hotel'},
+    {id:3,title:'All Hotels',link:'/admin/section3',icon:'fa-solid fa-hotel'},
   ]
 
 }
