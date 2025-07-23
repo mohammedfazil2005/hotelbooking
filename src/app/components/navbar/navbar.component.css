@@ -3,8 +3,13 @@
 }
 
 .nav-a-tag{
-    color: black;
+    color: white;
     font-weight: lighter;
     border-bottom: 2px solid white;
     margin: 0px 10px;
+    cursor: pointer;
+}
+.nav-a-tag:hover{
+    color: orange;
+    border-bottom: 2px solid orange ;
 }

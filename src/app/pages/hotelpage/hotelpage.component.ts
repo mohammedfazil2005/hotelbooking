@@ -4,7 +4,7 @@ import { HeaderHotelsComponent } from "../../components/header-hotels/header-hot
 
 @Component({
   selector: 'app-hotelpage',
-  imports: [NavbarComponent, HeaderHotelsComponent],
+  imports: [HeaderHotelsComponent],
   templateUrl: './hotelpage.component.html',
   styleUrl: './hotelpage.component.css'
 })

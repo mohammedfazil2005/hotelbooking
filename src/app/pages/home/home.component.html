@@ -1,8 +1,15 @@
 <div> 
     <div class="bg-image-div">
-         <img   src="https://a-static.besthdwallpaper.com/japanese-temple-mountains-wallpaper-1920x1080-83005_48.jpg" alt="">
+         <!-- <img   src="https://wallpapercrafter.com/desktop/94732-city-artist-artwork-digital-art-hd-4k-artstation.jpg" alt=""> -->
+     <video oncanplay="this.play()" onloadedmetadata="this.muted=true" autoplay loop>
+  <source src="bgvideo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
     </div>
-<app-navbar></app-navbar>
-<app-header></app-header>
-<!-- <app-header-hotels></app-header-hotels> -->
+<app-navbar (customEvent)="getDataFromChild($event)" ></app-navbar>
+<app-header *ngIf="isHeader;else elseBlock" (customEvent)="getDataFromChild($event)"></app-header>
+<ng-template  #elseBlock>
+    <app-login (customEvent)="closeLogin($event)"></app-login>
+</ng-template>
+
 </div>

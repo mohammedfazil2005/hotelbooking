@@ -1,7 +1,7 @@
 .bg-image-div{
     position: relative;
 }
-.bg-image-div img {
+.bg-image-div video {
     position: absolute;
     top: 0;
     left: 0;
@@ -9,5 +9,5 @@
     height: 100vh;
     object-fit: cover; /* ensures aspect ratio without distortion */
     z-index: -1;
-    opacity: 0.8;
+    opacity: 1;
 }

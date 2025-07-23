@@ -23,30 +23,33 @@
 .header-content p{
     text-align: center;
     font-weight: lighter;
+    /* text-decoration: underline orange; */
+    padding: 3px;
 }
 .header-content div{
     width: 400px;
     display: flex;
     padding:10px 20px;
     border: none;
-    justify-content: space-between;
+   
     border-radius: 20px;
-    background-color: rgba(65, 62, 62, 0.529);
+    
     gap: 10px;
 }
 .header-content div button{
     padding:10px 10px;
     border-radius: 20px;
     background-color: rgba(65, 62, 62, 0.529);
-
+    
     color: white;
     width: 100%;
-    border: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 14px;
-    font-weight: lighter;
+   border: 2px solid orange;
+
+    font-size: 16px;
+    font-weight: bold;
+}
+.header-content div button i{
+    margin-right: 20px;
 }
 
 @media screen and (max-width:700px) {

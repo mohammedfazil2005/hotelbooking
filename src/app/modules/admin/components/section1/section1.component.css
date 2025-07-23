@@ -1,0 +1,57 @@
+.section1-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    
+
+}
+.section1-container h1{
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.box-container-section1{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+
+}
+
+.section-1-box{
+    width: 300px;
+    height: 200px;
+    border: 2px solid orange;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-image: url('https://media.istockphoto.com/id/1388603346/vector/city-buildings-facades-illustration.jpg?s=612x612&w=0&k=20&c=mB1uEIdzAOO32MFRbJ4ciuioyj0mQOv21XPA-ygghYE=');
+}
+.section-1-box h6{
+    font-weight: lighter;
+}
+.section-1-box h2{
+    font-size: 50px;
+}
+
+.table-container-section1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+.table-container-section1 table thead th{
+    text-transform: uppercase;
+}
+
+.table-container-section1 table tr td{
+    font-weight: lighter;
+}
+
+.table-container-section1 table tr td img{
+    width: 40px;
+    height: 40px;
+}

@@ -1,0 +1,6 @@
+<div class="sidebar-container">
+    <!-- <h6>Voyago </h6> -->
+    <ul>
+        <a [routerLink]="each.link" *ngFor="let each of sidebarArray"><i [class]="each.icon"></i>{{each.title}}</a>
+    </ul>
+</div>

@@ -1,0 +1,34 @@
+.sidebar-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    border: 1px solid lightgray;
+    width: 200px;
+    height: 90vh;
+}
+.sidebar-container h6{
+    font-weight: bold;
+    text-align: center;
+}
+.sidebar-container ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.sidebar-container a{
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom: 1px solid orange;
+    width: 100%;
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+}
+.sidebar-container a i{
+    margin-right: 30px;
+}
