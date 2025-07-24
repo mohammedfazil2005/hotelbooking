@@ -13,24 +13,29 @@
         <button class="rounded-5 fs-3" style="color: orange;background-color: transparent;border: none;" (click)="sendData()">x</button>
     </div>
 </div>
-    <form class="login-input-container">
+    <form class="login-input-container" [formGroup]="registerForm">
          <div  *ngIf="!toggleVal">
             <label for="">Username</label>
-            <input type="text" placeholder="Enter your username">
+            <input formControlName="username" type="text" placeholder="Enter your username">
         </div>
         <div>
             <label for="">Email</label>
-            <input type="text" placeholder="Enter your email">
+            <input type="text" placeholder="Enter your email" formControlName="email">
+            <p  class="text-danger" *ngIf="registerForm.get('email')?.errors && registerForm.get('email')?.touched
+            ">Invalid Email</p>
         </div>
+       
 
         <div>
             <label for="">Password</label>
-            <input type="password" placeholder="Enter your Password">
+            <input formControlName="password" type="password" placeholder="Enter your Password">
+            <p  class="text-danger" *ngIf="registerForm.get('password')?.errors && registerForm.get('password')?.touched
+            ">Password atleast contain 4 to 8 characters</p>
         </div>
 
-        <button *ngIf="this.toggleVal;else elseBlock3">Login</button>
+        <button type="submit" (click)="onLoginClick($event,'login')">Login</button>
         <ng-template #elseBlock3>
-    <button >Register</button>
+    <button (click)="onLoginClick($event,'register')">Register</button>
         </ng-template>
         <p *ngIf="this.toggleVal">Forgot password?</p>
         <p (click)="this.toggleVal=false" *ngIf="toggleVal;else elseblock2">Don't have an account?</p>
@@ -40,5 +45,7 @@
 
     </form>
     </div>
+     
+    
     
 </div>

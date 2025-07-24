@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from "../../components/navbar/navbar.component";
 import { HeaderHotelsComponent } from "../../components/header-hotels/header-hotels.component";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-hotelpage',
@@ -9,5 +10,13 @@ import { HeaderHotelsComponent } from "../../components/header-hotels/header-hot
   styleUrl: './hotelpage.component.css'
 })
 export class HotelpageComponent {
+
+  constructor(private router:Router){}
+
+  onLogout(){
+    alert("Logged out!")
+    sessionStorage.clear()
+    this.router.navigateByUrl('/')
+  }
 
 }

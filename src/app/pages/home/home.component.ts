@@ -4,6 +4,8 @@ import { HeaderComponent } from "../../components/header/header.component";
 import { HeaderHotelsComponent } from "../../components/header-hotels/header-hotels.component";
 import { LoginComponent } from "../../components/login/login.component";
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+import { ApiService } from '../../services/apiservice/api.service';
 
 @Component({
   selector: 'app-home',
@@ -12,25 +14,27 @@ import { CommonModule } from '@angular/common';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  isHeader:boolean=true
+
+
+  constructor(private router:Router,public api:ApiService){}
 
   // getting data from child
 
   getDataFromChild(event:string){
-    console.log(event)
+
 
     if(sessionStorage.getItem("token")){
-      this.isHeader=true
-      console.log(this.isHeader)
+      this.api.isHeader=true
+      this.router.navigateByUrl('/hotel')
     }else{
-      this.isHeader=false
-      console.log(this.isHeader)
+      this.api.isHeader=false
+      
     }
     
   }
 
   closeLogin(event:string){
-    this.isHeader=true
+    this.api.isHeader=true
   }
 
 }

@@ -1,24 +1,24 @@
-<div class="box-container">
-    <div class="box-parent">
+<div class="box-container" *ngFor="let eachhotel of hotelArray">
+    <div class="box-parent" >
          <div class="box-left">
-        <img src="https://st.hzcdn.com/simgs/c6414c45009b37cb_4-4280/asian-sunroom.jpg" alt="">
+        <img [src]="'http://localhost:3000/uploads/' + eachhotel.hotelpicture"  alt="">
     </div>
     <div class="box-right">
         <div class="box-heading">
          
         </div>
-        <h1 id="heading-box">Luxury Super Delux</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, ducimus tenetur. At, sunt nisi, earum sit e</p>
+        <h1 id="heading-box">{{eachhotel.hotelname}}</h1>
+        <p>{{eachhotel.hoteldescription}}</p>
         <div class="price-details">
             <h6>Start From</h6>
-            <h1>₹299</h1>
+            <h1>₹{{eachhotel.hotelrate}}</h1>
             <span>/NIGHT</span>
         </div>
         <div class="details-box">
             <h3>STATUS <span>Available</span></h3>
             <h3>PAYMENT <span>30% Advanced</span></h3>
-            <h3>GUEST <span>2</span></h3>
-            <h3>BEDS <span>2</span></h3>
+            <h3>GUEST <span>{{eachhotel.hotelallotedguests}}</span></h3>
+            <h3>BEDS <span>{{eachhotel.hotelbeds}}</span></h3>
         </div>
         <div class="box-right-button-div">
             <button >BOOK NOW</button>
@@ -27,32 +27,6 @@
     </div>
     </div>
     <hr>
-      <div class="box-parent">
-         <div class="box-left">
-        <img src="https://hips.hearstapps.com/hmg-prod/images/hbx010124amandajacobs-005-66e05129caa45.jpg?crop=1xw:0.84375xh;0,0.197xh" alt="">
-    </div>
-    <div class="box-right">
-        <div class="box-heading">
-         
-        </div>
-        <h1 id="heading-box">Simple Family Room</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, ducimus tenetur. At, sunt nisi, earum sit e</p>
-        <div class="price-details">
-            <h6>Start From</h6>
-            <h1>₹399</h1>
-            <span>/NIGHT</span>
-        </div>
-        <div class="details-box">
-            <h3>STATUS <span>Available</span></h3>
-            <h3>PAYMENT <span>30% Advanced</span></h3>
-            <h3>GUEST <span>7</span></h3>
-            <h3>BEDS <span>5</span></h3>
-        </div>
-        <div class="box-right-button-div">
-            <button >BOOK NOW</button>
-            <button>MORE DETAILS</button>
-        </div>
-    </div>
-    </div>
+     
     
 </div>

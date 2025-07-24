@@ -13,7 +13,7 @@
 
 .box-container-section1{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     flex-wrap: wrap;
     gap: 10px;
     width: 100%;
@@ -42,6 +42,10 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
+}
+.table-container-section1 table{
+    width: 100% !important;
+    table-layout: fixed; /* optional if you want equal column widths */
 }
 .table-container-section1 table thead th{
     text-transform: uppercase;

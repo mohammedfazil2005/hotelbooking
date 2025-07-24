@@ -7,7 +7,7 @@
 </video>
     </div>
 <app-navbar (customEvent)="getDataFromChild($event)" ></app-navbar>
-<app-header *ngIf="isHeader;else elseBlock" (customEvent)="getDataFromChild($event)"></app-header>
+<app-header *ngIf="this.api.isHeader;else elseBlock" (customEvent)="getDataFromChild($event)"></app-header>
 <ng-template  #elseBlock>
     <app-login (customEvent)="closeLogin($event)"></app-login>
 </ng-template>

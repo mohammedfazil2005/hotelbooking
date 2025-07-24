@@ -6,6 +6,7 @@
     border: 1px solid lightgray;
     width: 200px;
     height: 90vh;
+    margin-bottom: 30px;
 }
 .sidebar-container h6{
     font-weight: bold;
@@ -31,4 +32,29 @@
 }
 .sidebar-container a i{
     margin-right: 30px;
+}
+
+@media screen and (max-width:600px) {
+    .sidebar-container{
+        width: 100%;
+    }
+    .sidebar-container ul a{
+        font-size: 14px;
+    }
+    .sidebar-container a i{
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width:508px) {
+    .sidebar-container{
+        width: 100%;
+        border: none;
+    }
+    .sidebar-container ul a{
+        font-size: 10px;
+    }
+    .sidebar-container a i{
+        margin-right: 10px;
+    }
 }

@@ -5,7 +5,7 @@
         <div class="section-1-box">
        <div>
          <h6>Users</h6>
-        <h2>122</h2>
+        <h2>{{allCounts.totalusers}}</h2>
        </div>
        <i class="fa-solid fa-users"></i>
         </div>
@@ -13,7 +13,7 @@
         <div class="section-1-box">
        <div>
          <h6>Bookings</h6>
-        <h2>12</h2>
+        <h2>{{allCounts.totalHotels}}</h2>
        </div>
        <i class="fa-solid fa-users"></i>
         </div>
@@ -22,7 +22,7 @@
         <div class="section-1-box">
        <div>
          <h6>Hotels</h6>
-        <h2>10</h2>
+        <h2>{{allCounts.totalHotels}}</h2>
        </div>
        <i class="fa-solid fa-users"></i>
         </div>
@@ -37,17 +37,16 @@
       <th scope="col">#</th>
       <th scope="col">username</th>
       <th scope="col">email</th>
-      <th scope="col">phone</th>
+      
       <th scope="col">image</th>
     </tr>
   </thead>
   <tbody>
-    <tr class="text-center">
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>mdo</td>
-      <td><img src="https://media.istockphoto.com/id/1388603346/vector/city-buildings-facades-illustration.jpg?s=612x612&w=0&k=20&c=mB1uEIdzAOO32MFRbJ4ciuioyj0mQOv21XPA-ygghYE=" alt=""></td>
+    <tr class="text-center" *ngFor="let eachUser of allUsersArray;let i=index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{eachUser.username}}</td>
+      <td>{{eachUser.email}}</td>
+      <td><i class="fa-solid fa-user"></i></td>
     </tr>
     
     

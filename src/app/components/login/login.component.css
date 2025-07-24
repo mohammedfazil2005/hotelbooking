@@ -14,8 +14,9 @@
     /* filter: blur(1px); */
     border-radius: 10px;
     gap: 10px;
-      width: 600px;
+      width: 650px;
       background-color: rgba(30, 18, 18, 0.851);
+      margin: 0px 20px;
      
       
 }

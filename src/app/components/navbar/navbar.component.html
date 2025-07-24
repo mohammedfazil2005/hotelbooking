@@ -7,14 +7,20 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-light">
         <li class="nav-item">
-          <a class="nav-link nav-a-tag" aria-current="page" href="/">Homepage</a>
+          <a class="nav-link nav-a-tag" aria-current="page" href="/" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Homepage</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link nav-a-tag" routerLink="/hotel">Hotels</a>
+          <a class="nav-link nav-a-tag" routerLink="/hotel" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Hotels</a>
         </li>
-            <li class="nav-item">
-          <a class="nav-link nav-a-tag" (click)="sendData()">Login</a>
+            <li class="nav-item" *ngIf="!isLoggedIn;else elseBlock">
+          <a class="nav-link nav-a-tag" (click)="sendData()" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Login</a>
         </li>
+        <ng-template #elseBlock>
+           <li class="nav-item">
+          <a class="nav-link nav-a-tag"  data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Logout</a>
+        </li>
+        </ng-template>
+       
       </ul>
     </div>
   </div>

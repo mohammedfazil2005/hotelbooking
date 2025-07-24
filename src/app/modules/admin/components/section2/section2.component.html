@@ -1,45 +1,51 @@
 <div class="section2-container">
     <h1>Add hotel</h1>
-    <form action="" class="mt-4">
+    <form action="" class="mt-4" [formGroup]="hotelForm" (submit)="onAddHotelClick()">
         <div>
             <h6>Hotel Name</h6>
-            <input type="text" class="form-control" placeholder="hotel name">
+            <input formControlName="hotelname" type="text" class="form-control" placeholder="hotel name">
         </div>
         <div>
             <h6>Picture</h6>
-            <input type="file">
+            <input  type="file" #fileinput (change)="onImageInputChange($event)">
+            <img *ngIf="previewImage" [src]="previewImage" alt="">
         </div>
          <div >
             <h6>Description</h6>
-            <textarea type="text" class="form-control" rows="2" cols="10" placeholder="about hotel"></textarea>
+            <textarea formControlName="hotelDescription" type="text" class="form-control" rows="2" cols="10" placeholder="about hotel"></textarea>
         </div>
          <div>
             <h6>Rate</h6>
-             <input type="text" class="form-control" placeholder="price/night">
+             <input formControlName="hotelRate" type="text" class="form-control" placeholder="price/night">
         </div>
          <div>
             <h6>Guests</h6>
-             <input type="text" class="form-control" placeholder="total number of guests alloted">
+             <input formControlName="hotelAllotedGuests" type="text" class="form-control" placeholder="total number of guests alloted">
         </div>
            <div>
             <h6>Beds</h6>
-             <input type="text" class="form-control" placeholder="total number of beds">
+             <input formControlName="hotelBeds" type="text" class="form-control" placeholder="total number of beds">
         </div>
         <div>
             <h6>Pincode</h6>
-             <input type="text" class="form-control" placeholder="pincode">
+             <input formControlName="pincode" type="text" class="form-control" placeholder="pincode">
         </div>
          <div>
             <h6>Contact</h6>
-             <input type="text" class="form-control" placeholder="pincode">
+             <input formControlName="contact" type="text" class="form-control" placeholder="pincode">
         </div>
         <main style="display: flex;width: 100%;gap: 2px;align-items: center;">
-            <input type="text" class="form-control w-100" placeholder="additional facilities">
-            <button style="background-color: orange;border:1px solid lightgray;padding: 7px;" class="text-light"><i class="fa-solid fa-plus"></i></button>
+            <input #facilitesValue type="text" class="form-control w-100" placeholder="additional facilities">
+            <button  (click)="onAddFacilites(facilitesValue)" type="button" style="background-color: orange;border:1px solid lightgray;padding: 7px;" class="text-light"><i class="fa-solid fa-plus"></i></button>
         </main>
-        <div></div>
+        <section class="facilities-container">
+            <sub *ngFor="let eachfac of facilitesArray">
+                <h6>{{eachfac}}</h6>
+                <button type="button"><i class="fa-solid fa-trash"></i></button>
+            </sub>
+        </section>
         <div>
-            <button>Add Hotel</button>
+            <button type="button" (click)="onAddHotelClick()">Add Hotel</button>
         </div>
     </form>
 </div>
