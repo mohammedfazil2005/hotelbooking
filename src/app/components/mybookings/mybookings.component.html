@@ -1,0 +1,21 @@
+<div class="my-bookings-container" *ngIf="userHotels.length>0;else elseBlock">
+    <h1 style="color: orange;font-weight: bolder;">Your bookings!</h1>
+   <div class="my-bookings-row">
+     <div *ngFor="let eachBooking of userHotels" class="bookings-box">
+        <img [src]="'http://localhost:3000/uploads/'+eachBooking.hotelpicture" alt="">
+        <h1>{{eachBooking.hotelname}}</h1>
+        <p>Price: <span>₹{{eachBooking.totalprice}}</span> </p>
+        <p>Alloted Persons: <span>{{eachBooking.totalpersons}}</span> </p>
+        <p>status: <span>Available</span></p>
+    </div>
+   </div>
+    
+  
+</div>
+
+<ng-template #elseBlock>
+        <div class="booking-empty my-4 d-flex justify-content-center flex-column align-items-center">
+  <p class="empty-text">Oops! You have no bookings yet.</p>
+  <button routerLink="/hotel"  class="book-now-btn">Book Now!</button>
+        </div>
+    </ng-template>

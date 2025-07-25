@@ -1,0 +1,34 @@
+<div class="view-container">
+    <div class="view-left">
+        <img [src]="'http://localhost:3000/uploads/' + singleHotel.hotelpicture" alt="">
+    </div>
+    <div class="view-right">
+        <h1>{{singleHotel.hotelname}}</h1>
+        <h3>{{singleHotel.hoteldescription}}</h3>
+       <div class="view-details">
+        <p>Rate/night/person:<span>₹{{singleHotel.hotelrate}}</span></p>
+        <p>Total beds:<span>{{singleHotel.hotelbeds}}</span></p>    
+        <p>Alloted guests:<span>{{singleHotel.hotelallotedguests}}</span></p> 
+        <p>Additional Facilites:</p>
+       </div>
+        <div class="addtionalFacilites-view">
+            <div *ngFor="let eachfac of singleHotel.addtionalfacilities">
+                <h5>{{eachfac}}</h5>
+            </div>
+            
+        </div>
+        <div class="price-details-div">
+            <div class="price-details-left">
+                <button (click)="totalUserUpdateButton('minus')"><i class="fa-solid fa-user-minus"></i></button>
+                <h1>{{totalUsers}}</h1>
+                <button (click)="totalUserUpdateButton('add')"><i class="fa-solid fa-user-plus"></i></button>
+            </div>
+            <div class="price-details-right">
+                <h1>₹{{totalPrice}}</h1>
+            </div>
+        </div>
+         <div class="box-right-button-div">
+            <button (click)="onBookClick()">BOOK NOW</button>
+        </div>
+    </div>
+</div>

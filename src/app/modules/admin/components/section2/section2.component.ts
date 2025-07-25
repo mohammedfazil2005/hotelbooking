@@ -67,6 +67,7 @@ export class Section2Component {
       next:(responce:apiResponce)=>{
         console.log(responce)
         alert(responce.message)
+        this.hotelForm.reset()
       },
       error:(reason:apiResponce)=>{
         console.log(reason)

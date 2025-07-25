@@ -28,6 +28,21 @@ export interface hotelType{
 }
 
 export interface countType{
-    totalHotels:string|number
-    totalusers:string|number
+    totalHotels:number
+    totalusers:number
+    totalbookings:number
+}
+
+export interface onAddHotel{
+    hotelid:number,
+    totalprice:number,
+    totalpersons:number
+}
+
+export interface bookingType{
+    username:string,
+    hotelname:string,
+    totalpersons:number,
+    totalprice:number,
+    hotelpicture:string
 }

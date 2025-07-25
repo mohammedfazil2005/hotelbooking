@@ -14,13 +14,13 @@
     </tr>
   </thead>
   <tbody>
-    <tr class="text-center" *ngFor="let eachhotel of allHotelArray;let i=index;">
-      <th scope="row">{{i+1}}</th>
-      <td>{{eachhotel.hotelname}}</td>
-      <td>{{eachhotel.hotelrate}}</td>
-      <td>{{eachhotel.contact}}</td>
+    <tr class="text-center" *ngFor="let eachhotel of allHotelArray;let i=index;" style="margin-bottom: 30px;">
+      <th scope="row p-4">{{i+1}}</th>
+      <td class="p-4">{{eachhotel.hotelname}}</td>
+      <td class="p-4">{{eachhotel.hotelrate}}</td>
+      <td class="p-4">{{eachhotel.contact}}</td>
      
-      <td style="cursor: pointer;"><i class="fa-solid fa-eye"></i></td>
+      <td (click)="onEyeClick(eachhotel.id)" data-bs-toggle="modal" data-bs-target="#exampleModal" style="cursor: pointer;"><i class="fa-solid fa-trash"></i></td>
     </tr>
     
     
@@ -29,3 +29,28 @@
 </div>
 </div>
 
+
+
+
+
+<!-- Modal -->
+<div class="modal fade modal-lg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Delete hotel</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img [src]="'http://localhost:3000/uploads/'+ hotelData.hotelpicture" alt="">
+        <h1>{{hotelData.hotelname}}</h1>
+        <h6>{{hotelData.hoteldescription}}</h6>
+        <p>Rate:<span>₹{{hotelData.hotelrate}}</span></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" data-bs-dismiss="modal">Close</button>
+        <button type="button" (click)="onDeleteHotel()"  data-bs-dismiss="modal">Delete Hotel</button>
+      </div>
+    </div>
+  </div>
+</div>

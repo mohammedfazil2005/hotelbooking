@@ -33,7 +33,7 @@
             ">Password atleast contain 4 to 8 characters</p>
         </div>
 
-        <button type="submit" (click)="onLoginClick($event,'login')">Login</button>
+        <button *ngIf="toggleVal;else elseBlock3" type="submit" (click)="onLoginClick($event,'login')">Login</button>
         <ng-template #elseBlock3>
     <button (click)="onLoginClick($event,'register')">Register</button>
         </ng-template>

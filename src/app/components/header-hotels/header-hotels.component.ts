@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { ApiService } from '../../services/apiservice/api.service';
 import { hotelType } from '../../interfaces/userInterface';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header-hotels',
-  imports: [CommonModule],
+  imports: [CommonModule,RouterLink],
   templateUrl: './header-hotels.component.html',
   styleUrl: './header-hotels.component.css'
 })

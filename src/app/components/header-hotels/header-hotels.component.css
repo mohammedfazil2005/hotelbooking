@@ -163,3 +163,14 @@
 
 
 }
+
+@media screen and (max-width:427px){
+  #heading-box{
+    font-size: 25px;
+  }
+  .box-right p{
+    font-size: 10px;
+  }
+
+
+}

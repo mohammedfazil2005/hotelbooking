@@ -17,7 +17,8 @@ export class Section1Component {
   constructor(private api:ApiService){
     this.allCounts={
       totalHotels:0,
-      totalusers:0
+      totalusers:0,
+      totalbookings:0
     }
   }
 
