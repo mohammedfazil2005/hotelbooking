@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ApiService } from '../../../../services/apiservice/api.service';
-import { hotelType } from '../../../../interfaces/userInterface';
+import { apiResponce, hotelType } from '../../../../interfaces/userInterface';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 export class Section3Component {
 
   allHotelArray:hotelType[]=[]
-
+  hotelData:any|hotelType=''
 
   constructor(private api:ApiService){}
 
@@ -26,4 +26,25 @@ export class Section3Component {
       this.allHotelArray=res.data
     })
   }
+
+  onEyeClick(id:number){
+    this.hotelData=this.allHotelArray.find((a)=>a.id==id)
+    console.log(this.hotelData)
+  }
+
+  onDeleteHotel(){
+    this.api.onDeleteHotel(this.hotelData.id).subscribe({
+      next:(responce:apiResponce)=>{
+        console.log(responce)
+        alert(responce.message)
+        this.onGetUsers()
+      },
+      error:(reason:apiResponce)=>{
+        console.log(reason)
+        alert(reason.error.message)
+      }
+    })
+  }
+
+
 }

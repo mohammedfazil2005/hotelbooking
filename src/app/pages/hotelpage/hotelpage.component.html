@@ -14,6 +14,10 @@
         </li>
 
           <li class="nav-item">
+          <a class="nav-link nav-a-tag fw-lighter ms-2" style="border-bottom: 1px solid white;color: orange;" routerLink="/hotel/mybookings">My bookings</a>
+        </li>
+
+          <li class="nav-item">
           <a class="nav-link nav-a-tag fw-lighter ms-2" style="border-bottom: 1px solid white;color: orange;" (click)="onLogout()">Logout</a>
         </li>
         
@@ -25,4 +29,4 @@
   </div>
 </nav>
 
-<app-header-hotels></app-header-hotels>
+<router-outlet></router-outlet>

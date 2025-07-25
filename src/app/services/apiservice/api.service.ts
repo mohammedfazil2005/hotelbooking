@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { apiResponce, countType, hotelType, userLogin } from '../../interfaces/userInterface';
+import { apiResponce, bookingType, countType, hotelType, onAddHotel, userLogin } from '../../interfaces/userInterface';
 
 @Injectable({
   providedIn: 'root'
@@ -33,6 +33,19 @@ export class ApiService {
 
   onFetchCounts(){
     return this.http.get<countType>('/user/getcount')
+  }
+
+  onGetSingleHotel(id:string){
+    return this.http.get<hotelType>(`/hotel/onGetSingleHotel/${id}`)
+  }
+  onBooking(body:onAddHotel){
+    return this.http.post<apiResponce>(`/hotel/onBooking`,body)
+  }
+  onGetUserHotels(){
+    return this.http.get<bookingType[]>('/hotel/onGetUserHotels')
+  }
+  onDeleteHotel(id:number){
+    return this.http.delete<apiResponce>(`/hotel/deletehotel/${id}`)
   }
 
 

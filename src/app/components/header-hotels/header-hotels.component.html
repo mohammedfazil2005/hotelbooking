@@ -1,12 +1,10 @@
 <div class="box-container" *ngFor="let eachhotel of hotelArray">
     <div class="box-parent" >
          <div class="box-left">
-        <img [src]="'http://localhost:3000/uploads/' + eachhotel.hotelpicture"  alt="">
+        <img [routerLink]="'/hotel/view/'+eachhotel.id" [src]="'http://localhost:3000/uploads/' + eachhotel.hotelpicture"  alt="">
     </div>
     <div class="box-right">
-        <div class="box-heading">
-         
-        </div>
+        
         <h1 id="heading-box">{{eachhotel.hotelname}}</h1>
         <p>{{eachhotel.hoteldescription}}</p>
         <div class="price-details">
@@ -21,8 +19,8 @@
             <h3>BEDS <span>{{eachhotel.hotelbeds}}</span></h3>
         </div>
         <div class="box-right-button-div">
-            <button >BOOK NOW</button>
-            <button>MORE DETAILS</button>
+            <button [routerLink]="'/hotel/view/'+eachhotel.id">BOOK NOW</button>
+            <button [routerLink]="'/hotel/view/'+eachhotel.id">MORE DETAILS</button>
         </div>
     </div>
     </div>
